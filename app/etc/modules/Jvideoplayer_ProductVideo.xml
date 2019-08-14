@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+	<modules>
+		<Jvideoplayer_Productvideo>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Jvideoplayer_Productvideo>
+	</modules>
+</config>
+

@@ -1,0 +1,117 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+
+<?php
+  /**
+	* Product Sample Video
+	*
+	* @see Jvideoplayer_Productvideo_Block_JproductVideo
+	*/
+?>
+
+<?php 
+
+	$categoryName	= $this->getProductCategory();
+
+	/**
+	 * NOTICE YOU ARE FREE TO CHANGE
+	 * The below CONDITION depends on your need
+	 * If you want to play sample video for all the products you can remove this condition
+	 */
+
+	if($categoryName	== 'Books')
+	{
+		$jsUrl		= Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS);
+		$skinUrl	= Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN);
+		$productId	= Mage::registry('current_product')->getId();
+
+		if($this->isDownloadable($productId))
+		{
+?>
+			<link rel="stylesheet" type="text/css" href="<?php echo $skinUrl ?>frontend/base/default/css/blue.monday/jplayer.blue.monday.css"  />
+			<script type="text/javascript" src="<?php echo $jsUrl ?>jvideo/jquery.js"></script>
+			<script type="text/javascript" src="<?php echo $jsUrl ?>jvideo/jquery.jplayer.js"></script>
+			<script type="text/javascript" src="<?php echo $jsUrl ?>jvideo/customVideo.js"></script>
+			<input type='hidden' id ="currentproductId" name='currentproductId' value="<?php echo $productId;?>">
+
+			<div id="jp_container_1" class="jp-video jp-video-360p">
+				<div class="jp-title">
+					<ul>
+						<li id='videoCaption'></li>
+					</ul>
+				</div>
+				<div class="jp-type-single">
+					<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+					<div class="jp-gui">
+						<div class="jp-video-play">
+							<a href="javascript:;" class="jp-video-play-icon" tabindex="1">play</a>
+						</div>
+						<div class="jp-interface">
+							<div class="jp-progress">
+								<div class="jp-seek-bar">
+									<div class="jp-play-bar"></div>
+								</div>
+							</div>
+							<div class="jp-current-time"></div>
+							<div class="jp-duration"></div>
+							<div class="jp-controls-holder">
+								<ul class="jp-controls">
+									<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+									<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+									<li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+									<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+									<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+									<li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+								</ul>
+								<div class="jp-volume-bar">
+									<div class="jp-volume-bar-value"></div>
+								</div>
+								<ul class="jp-toggles">
+									<li><a href="javascript:;" class="jp-full-screen" tabindex="1" title="full screen">full screen</a></li>
+									<li><a href="javascript:;" class="jp-restore-screen" tabindex="1" title="restore screen">restore screen</a></li>
+									<li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+									<li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="jp-no-solution">
+						<span>Update Required</span>
+						To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+					</div>
+				</div>
+			</div>
+<?php
+		} 
+		else
+		{
+?>
+			<h1>Sorry! No Videos available</h1>
+<?php
+		}
+	}
+?>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>J_product_Video</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>GPL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Displays Sample Video in the Product view page using jPlayer </summary>
+    <description>Displays Sample Video in the Product view page using jPlayer </description>
+    <notes>Stable Release</notes>
+    <authors><author><name>Dev</name><user>Dev4u</user><email>workdesk4u@gmail.com</email></author></authors>
+    <date>2013-04-05</date>
+    <time>11:20:51</time>
+    <contents><target name="magelocal"><dir name="Jvideoplayer"><dir name="Productvideo"><dir name="Block"><file name="Jproductvideo.php" hash="1567551ccee30af65eddbfeafa1c6030"/></dir><dir name="Helper"><file name="Data.php" hash="369e579c7239136b2eb119f6c2d29fd6"/></dir><dir name="controllers"><file name="JproductvideoController.php" hash="36aa5c6c24063c2a5ab2fa28aa5d885b"/></dir><dir name="etc"><file name="config.xml" hash="f01c6333f3e2163d17b687c43a00da30"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="catalog.xml" hash="42a433b15b6844e5bbc06311a293215c"/></dir><dir name="template"><dir name="productvideo"><file name="playvideo.phtml" hash="842d53aae0aa6cbc1ea2e95ac698be97"/></dir><dir name="catalog"><dir name="product"><file name="view.phtml" hash="6a7e8055baa029ff06027da1e6ea4b54"/></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Jvideoplayer_ProductVideo.xml" hash="588e4c6ed2f39fdecda547cd9d1e8c4d"/></dir></target><target name="mage"><dir name="."><dir name="js"><dir name="jvideo"><file name="Jplayer.swf" hash="f85e71a50abbaf2a1866ef16d392a420"/><file name="customVideo.js" hash="4f63d653bc29dcf49634d9e76ea7e66c"/><file name="jplayer.playlist.js" hash="35e1dca8183a37a71d012414f5ece128"/><file name="jquery.jplayer.inspector.js" hash="efdcfd5a92b8aa45743788331113d7eb"/><file name="jquery.jplayer.js" hash="f7bd969c00d3c1fbdb6a333fb77195e8"/><file name="jquery.js" hash="ba220e4c04ef84bde46fa06bb6ea2097"/></dir></dir><file name="Pv_Manual.pdf" hash="6cfe03d26aa4fd22de764f5315913584"/></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><dir name="blue.monday"><file name="jplayer.blue.monday.css" hash="c440fafcd4a42c4c7421249efc4ff89a"/><file name="jplayer.blue.monday.jpg" hash="0e0fdecc749a3e48cba25ae991154029"/><file name="jplayer.blue.monday.seeking.gif" hash="6459e146ed61caa28e8ede05beb520b8"/><file name="jplayer.blue.monday.video.play.png" hash="d736613748cb6f59e1ce86db5e58bee0"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
