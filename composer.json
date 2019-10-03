@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/J_product_Video",
+    "name": "OpenMageModuleFostering\/J_product_Video",
     "type": "magento-module",
     "license": "GPL",
     "homepage": "",
     "description": "Displays Sample Video in the Product view page using jPlayer ",
     "authors": [
-    {
-        "name": "Dev",
-        "email": "workdesk4u@gmail.com"
-    }
-],
+        {
+            "name": "Dev",
+            "email": "workdesk4u@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
